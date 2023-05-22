@@ -1,19 +1,205 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
   </head>
   <body>
-    <header>
-      <h1>My Website</h1>
-    </header>
-    <main>
-      <h2>Welcome to My Website</h2>
-      <p>This is the homepage of my website.</p>
+    <section class="header-block">
+      <div class="container">
+        <header>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo" src="/images/logo.svg" alt="Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Главная</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Отзывы</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Правила</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <h2>Торгуйте с легкостью, быстро и безопасно</h2>
+      <div class="d-flex justify-content-center w-100">
+        <div class="exchange-block">
+          <form class="exchange-block__form">
+            <div class="exchange-block__row">
+              <div class="exchange-block__group">
+                <div class="exchange-block__label">Вы отдаете</div>
+                <div class="exchange-block__currency">
+                  <input class="exchange-block__input" type="number" value="0.005">
+                  <div class="d-flex"><img class="exchange-block__currency-symbol" src="images/currencies/btc.svg">
+                    <div class="exchange-block__currency-text">BTC</div>
+                  </div>
+                </div>
+              </div>
+              <div class="exchange-block__arrow">
+                <button class="btn btn-link"><img class="icon" src="images/icons/chevron-icon.svg" alt=""></button>
+              </div>
+              <div class="exchange-block__group">
+                <div class="exchange-block__label">Вы получите</div>
+                <div class="exchange-block__currency">
+                  <input class="exchange-block__input" type="text" value="≈1.6624" readonly>
+                  <div class="d-flex"><img class="exchange-block__currency-symbol" src="images/currencies/ltc.svg">
+                    <div class="exchange-block__currency-text">LTC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exchange-block__row">
+              <input class="text-input" type="text" placeholder="Введите адрес вашего LTC кошелька">
+            </div>
+            <div class="exchange-block__row justify-content-end">
+              <button class="exchange-block__btn" type="submit">Обменять<img class="icon" src="images/icons/arrow-right.svg" alt=""></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <main class="global-wrapper">
+      <section class="multi_exchanges">
+        <div class="container">
+          <div class="multi_exchanges__container">
+            <h2>Разнонаправленные<br>обмены</h2>
+            <div class="coins-block">
+              <div class="coins-block__column">
+                <div class="currency_block"><img class="icon" src="images/currencies/trx.svg"/>
+                  <p>TRX</p>
+                </div>
+                <div class="currency_block"><img class="icon" src="images/currencies/btc.svg"/>
+                  <p>BTC</p>
+                </div>
+                <div class="currency_block"><img class="icon" src="images/currencies/ltc.svg"/>
+                  <p>LTC</p>
+                </div>
+              </div>
+              <div class="coins-block__column">
+                <div class="currency_block"><img class="icon" src="images/currencies/usdt.svg"/>
+                  <p>USDT</p>
+                </div>
+                <div class="currency_block"><img class="icon" src="images/currencies/eth.svg"/>
+                  <p>ETH</p>
+                </div>
+                <div class="currency_block"><img class="icon" src="images/currencies/xmr.svg"/>
+                  <p>XMR</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="we_guarantee">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="title">Мы гарантируем</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="we_guarantee__block"><img class="icon" src="images/free-icon-protection-6601043.svg">
+                <div class="we_guarantee__block-text">
+                  <h3>Безопасность данных</h3>
+                  <p>Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="we_guarantee__block"><img class="icon" src="images/free-icon-protection-6601043_2.svg">
+                <div class="we_guarantee__block-text">
+                  <h3>Безопасность данных</h3>
+                  <p>Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="we_guarantee__block"><img class="icon" src="images/free-icon-protection-6601043_3.svg">
+                <div class="we_guarantee__block-text">
+                  <h3>Безопасность данных</h3>
+                  <p>Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="we_guarantee__block"><img class="icon" src="images/free-icon-protection-6601043_4.svg">
+                <div class="we_guarantee__block-text">
+                  <h3>Безопасность данных</h3>
+                  <p>Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about_us">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="title">Про нас</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="about_us__block">
+                <div class="about_us__block-logo"><img class="icon" src="images/logo.png"></div>
+                <div class="about_us__block-text">
+                  <p>С нами выгодно работать, для наших партнеров у нас на сайте действует партнерская программа, благодаря которой вы можете зарабатывать на нашем сервисе, получать приятные бонусы и отличные скидки при обмене, вам просто</p>
+                  <p>Это ваш надежный партнер по обмену электронных валют, мы гарантируем качество и скорость обслуживания, и всегда готовы пойти навстречу нашим клиентам в любой ситуации.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="title">Отзывы о нас</h1>
+            </div>
+            <div class="col-md-6">
+              <div class="slider-arrows"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="slider" data-slick="{&quot;slidesToShow&quot;: 2, &quot;slidesToScroll&quot;: 2}">
+                <div>
+                  <h3>1</h3>
+                </div>
+                <div>
+                  <h3>2</h3>
+                </div>
+                <div>
+                  <h3>3</h3>
+                </div>
+                <div>
+                  <h3>4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-      <p>&copy; 2023 My Website</p>
+      <footer>
+        <div class="container"></div>
+      </footer>
     </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
   </body>
 </html>
