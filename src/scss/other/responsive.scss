@@ -12,7 +12,11 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 
 }
 @media (max-width: $lg-breakpoint) {
-
+  .exchange-block{
+    &__row {
+      display: block;
+    }
+  }
 }
 @media (max-width: $xl-breakpoint) {
   .about_us{

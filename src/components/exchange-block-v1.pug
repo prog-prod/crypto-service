@@ -1,0 +1,29 @@
+.exchange-block
+    form.exchange-block__form
+        .exchange-block__row
+            div.exchange-block__group
+                div.exchange-block__label Вы отдаете
+                div.exchange-block__currency
+                    input.exchange-block__input(type='number', value=0.005 )
+                    div.d-flex
+                        img.exchange-block__currency-symbol(src="images/currencies/btc.svg")
+                        div.exchange-block__currency-text BTC
+
+            div
+                button.exchange-block__swap-btn
+                    img.icon(src="images/icons/arrows-icons.svg" alt="")
+
+            div.exchange-block__group
+                div.exchange-block__label Вы получите
+                div.exchange-block__currency
+                    input.exchange-block__input(type='text', value='≈1.6624' readonly)
+                    div.d-flex
+                        img.exchange-block__currency-symbol(src="images/currencies/ltc.svg")
+                        div.exchange-block__currency-text LTC
+
+        .exchange-block__row
+            input.text-input(type='text', placeholder='Введите адрес вашего LTC кошелька' )
+        .exchange-block__row.justify-content-end
+            button.exchange-block__btn(type='submit')
+                | Обменять
+                img.icon(src="images/icons/arrow-right.svg" alt="")

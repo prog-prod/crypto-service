@@ -32,3 +32,15 @@ mixin logo(classes, alt)
     - classes = classes || ''
     - alt = alt || ''
     img.icon(src=`/images/logo.svg` class=classes alt=alt)
+
+mixin checkbox(label, checked)
+    label.custom-checkbox
+        div
+            input(type='checkbox', checked=(checked ? true : undefined))
+            span(class="checkmark")
+        div.custom-checkbox__label #{label}
+
+mixin dropdown()
+    div.custom-dropdown
+
+

@@ -1,7 +1,18 @@
 .footer{
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   padding: 95px 0 130px 0;
-
+  &__btn-group {
+    text-align: right;
+    .btn:last-child{
+      margin-left: 40px;
+    }
+  }
+  .btn {
+    .icon {
+      width: 23px;
+      height: 20px;
+    }
+  }
   &__links{
     margin-top: 75px;
     h6{
@@ -19,15 +30,17 @@
         margin-bottom: 15px;
       }
       li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        color: #A8A8A8;
         a {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 20px;
-          /* identical to box height */
           text-decoration: none;
-
           color: #A8A8A8;
-
+          &:hover{
+            color: darken(#A8A8A8, 5%);
+          }
         }
       }
     }

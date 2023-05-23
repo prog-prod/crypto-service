@@ -4,12 +4,12 @@ footer.footer
             +logo()
         .col-md-4
             button.btn.btn-block Написать нам
-        .col-1
-            button.btn.btn-block
-                +icon('message.svg')
-        .col-1
-            button.btn.btn-block
-                +icon('telegram.svg')
+        .col-2
+            .footer__btn-group
+                button.btn
+                    +icon('message.svg')
+                button.btn
+                    +icon('telegram.svg')
     .row.footer__links
         .col-md-4
             h6 Общее
@@ -36,8 +36,6 @@ footer.footer
         .col-md-2.offset-md-2
             h6 Рабочие часы
             ul.list-unstyled
-                li
-                    a(href="/") Сервис работает 24/7
-                li
-                    a(href="/") Тех. поддержка 24/7
+                li Сервис работает 24/7
+                li Тех. поддержка 24/7
 
