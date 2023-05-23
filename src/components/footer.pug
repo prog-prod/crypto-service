@@ -1,0 +1,43 @@
+footer.footer
+    .row
+        .col-md-6
+            +logo()
+        .col-md-4
+            button.btn.btn-block Написать нам
+        .col-1
+            button.btn.btn-block
+                +icon('message.svg')
+        .col-1
+            button.btn.btn-block
+                +icon('telegram.svg')
+    .row.footer__links
+        .col-md-4
+            h6 Общее
+            ul.list-unstyled
+                li
+                    a(href="/") Главная
+                li
+                    a(href="/") Отзывы
+                li
+                    a(href="/") Контакты
+                li
+                    a(href="/") FAQ
+        .col-md-4
+            h6 Документация
+            ul.list-unstyled
+                li
+                    a(href="/") Политика конфиденциальности
+                li
+                    a(href="/") AML / KYC
+                li
+                    a(href="/") Пользовательское соглашение
+                li
+                    a(href="/") Правила
+        .col-md-2.offset-md-2
+            h6 Рабочие часы
+            ul.list-unstyled
+                li
+                    a(href="/") Сервис работает 24/7
+                li
+                    a(href="/") Тех. поддержка 24/7
+

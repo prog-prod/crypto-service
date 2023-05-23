@@ -1,0 +1,34 @@
+mixin currency_block(coin_name, coin_img)
+    .currency_block
+        img.icon(src=`images/currencies/${coin_img}`)
+        p= coin_name
+
+mixin starRating(rating)
+    .star-rating
+        - for (var i = 0; i < 5; i++)
+            if i < rating
+                img(src="/images/icons/filled-star.svg" alt="")
+            else
+                img(src="/images/icons/not-filled-star.svg" alt="")
+
+mixin reviewBlock(img, name, date, rating, txt, additionalClass)
+    - additionalClass = additionalClass || ''
+    .review-block(class=additionalClass)
+        .review-block__row
+            .review-block__user
+                img.review-block__user-image(src=`/images/${img}`)
+                .review-block__user-name
+                    span= name
+                    .review-block__date= date
+            .review-block__rating
+                +starRating(rating)
+        .review-block__row
+            p.review-block__txt= txt
+
+mixin icon(icon_name, alt)
+    - alt = alt || ''
+    img.icon(src=`/images/icons/${icon_name}` alt=alt)
+mixin logo(classes, alt)
+    - classes = classes || ''
+    - alt = alt || ''
+    img.icon(src=`/images/logo.svg` class=classes alt=alt)

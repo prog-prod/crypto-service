@@ -1,0 +1,50 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "other/fonts";
+
+$blue: #0A4D68;
+$white: #FAFAFA;
+$dark: #2D2F34;
+$blueV2: #0A4D68;
+
+// Components
+@import "components/exchange-block";
+@import "components/review-block";
+@import "components/footer";
+@import "components/header";
+
+body {
+  background: linear-gradient(148.88deg, #1A4662 10.33%, #364D59 68.64%);
+  min-height: 100vh;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: $white;
+}
+
+.logo{
+  max-width: 224px;
+}
+.global-wrapper{
+  padding-bottom: 75px;
+}
+input.text-input{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark;
+  border:none;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid $dark;
+  padding:10px;
+}
+
+// Pages
+@import "other/main";
+@import "other/responsive";

@@ -1,0 +1,21 @@
+$sm-breakpoint: map-get($grid-breakpoints, sm);
+$md-breakpoint: map-get($grid-breakpoints, md);
+$lg-breakpoint: map-get($grid-breakpoints, lg);
+$xl-breakpoint: map-get($grid-breakpoints, xl);
+$xxl-breakpoint: map-get($grid-breakpoints, xxl);
+
+@media (max-width: $sm-breakpoint) {
+
+}
+
+@media (max-width: $md-breakpoint) {
+
+}
+@media (max-width: $lg-breakpoint) {
+
+}
+@media (max-width: $xl-breakpoint) {
+  .about_us{
+    background-image: none;
+  }
+}

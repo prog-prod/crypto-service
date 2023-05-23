@@ -1,0 +1,35 @@
+.footer{
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 95px 0 130px 0;
+
+  &__links{
+    margin-top: 75px;
+    h6{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+      margin-bottom: 20px;
+
+      color: #FAFAFA;
+    }
+    ul{
+      li:not(li:last-child){
+        margin-bottom: 15px;
+      }
+      li {
+        a {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          /* identical to box height */
+          text-decoration: none;
+
+          color: #A8A8A8;
+
+        }
+      }
+    }
+  }
+}

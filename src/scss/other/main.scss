@@ -1,0 +1,189 @@
+.header-block{
+  background: url('../images/main-header-bg.png') no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 1063px;
+  h2 {
+    text-align: center;
+    max-width: 620px;
+    margin: 94px auto 70px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+
+    color: #FAFAFA;
+  }
+}
+
+.multi_exchanges__container{
+  padding:140px 0;
+  h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 140%;
+    color: #fafafa;
+    margin-top: 110px;
+  }
+  .currency_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 65px;
+    gap: 10px;
+
+    width: 250px;
+    height: 244px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    p{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 34px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+  
+  .coins-block{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    gap:50px;
+
+    &__column {
+      position:relative;
+      .currency_block:not(.currency_block:last-child){
+        margin-bottom: 50px;
+      }
+      &:first-child{
+        top: -34px;
+        .currency_block:first-child{
+          background: linear-gradient(360deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
+          filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+          box-shadow: 0px 5px 5px darken(#354d59, 1%);
+        }
+      }
+      &:last-child{
+        top: 34px;
+        .currency_block:last-child{
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
+          filter: drop-shadow(0px -5px 20px rgba(0, 0, 0, 0.1));
+          box-shadow: 0px -5px 5px darken(#354d59, 1%);
+        }
+      }
+    }
+  }
+}
+h1.title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 78px;
+  color: $white;
+  margin-bottom: 70px;
+}
+.we_guarantee{
+  &__block{
+    display: flex;
+    align-items: center;
+    gap:40px;
+    padding: 40px 25px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 8px 20px 8px;
+    h3{
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 32px;
+      color: $white;
+    }
+    p{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $white;
+    }
+  }
+}
+.about_us{
+  padding:80px 0;
+  background: url("/images/about-us-bg.png") no-repeat;
+  background-position: center right;
+  background-size: auto 90%;
+  &__block{
+    align-items: center;
+    &-logo{
+      img{
+        max-width:500px;
+        width: 100%;
+      }
+    }
+    &-text{
+      border-left: 2px solid rgba(255, 255, 255, 0.1);
+      margin-left: 35px;
+      padding-left: 35px;
+      margin-right: 50px;
+      p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        max-width: 560px;
+        /* or 25px */
+        color: #FFFFFF;
+        &:not(p:last-child){
+          margin-bottom: 70px;
+        }
+      }
+    }
+  }
+}
+.star-rating{
+  display: flex;
+  img {
+    margin-left: 15px;
+  }
+}
+.reviews{
+  .slider{
+    width: 100%;
+    .slick-slide {
+      margin: 0 24px;
+    }
+    .slick-track
+    {
+      display: flex !important;
+    }
+
+    .slick-slide, .slick-slide > div, .review-block
+    {
+      height: 100% ;
+    }
+    /* the parent */
+    .slick-list {
+      margin: 0 -24px;
+    }
+  }
+  .slider-arrows{
+    display: flex;
+    gap:25px;
+    justify-content: flex-end;
+    .arrow-right, .arrow-left{
+      width: 61px;
+      height: 61px;
+      background: #2F3940;
+      box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.03), 3px 3px 12px rgba(0, 0, 0, 0.16);
+      border-radius: 35px;
+    }
+  }
+}
