@@ -3,14 +3,19 @@
   padding: 95px 0 130px 0;
   &__btn-group {
     text-align: right;
-    .btn:last-child{
-      margin-left: 40px;
-    }
+  }
+  .logo{
+    max-width: 274px;
   }
   .btn {
     .icon {
       width: 23px;
       height: 20px;
+    }
+    &.write_to_us{
+      display: inline-block;
+      width: 100%;
+      max-width: 360px;
     }
   }
   &__links{

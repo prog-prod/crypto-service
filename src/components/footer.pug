@@ -1,14 +1,15 @@
 footer.footer
     .row
-        .col-md-6
+        .col-7.col-lg-6.order-0
             +logo()
-        .col-md-4
+        .col-lg-4.order-2.order-lg-1.mt-4.mt-lg-0
             button.btn.btn-block Написать нам
-        .col-2
-            .footer__btn-group
+        .col-5.col-lg-2.order-1.order-lg-2.d-flex.align-items-lg-start.align-items-center.justify-content-end.justify-content-lg-around
+            div
                 button.btn
                     +icon('message.svg')
-                button.btn
+            div
+                button.btn.ms-4.ms-md-4.ms-lg-2
                     +icon('telegram.svg')
     .row.footer__links
         .col-md-4

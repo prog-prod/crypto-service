@@ -26,6 +26,8 @@
     line-height: 140%;
     color: #fafafa;
     margin-top: 110px;
+    margin-bottom: 120px;
+
   }
   .currency_block{
     display: flex;
@@ -33,9 +35,8 @@
     justify-content: center;
     padding: 35px 65px;
     gap: 10px;
-
+    border-radius: 5px;
     width: 250px;
-    height: 244px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(17.5px);
@@ -68,6 +69,9 @@
           background: linear-gradient(360deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
           filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
           box-shadow: 0px 5px 5px darken(#354d59, 1%);
+          p {
+            color: #7A7A7A;
+          }
         }
       }
       &:last-child{
@@ -76,6 +80,9 @@
           background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
           filter: drop-shadow(0px -5px 20px rgba(0, 0, 0, 0.1));
           box-shadow: 0px -5px 5px darken(#354d59, 1%);
+          p {
+            color: #7A7A7A;
+          }
         }
       }
     }
@@ -179,6 +186,7 @@ h1.title{
     gap:25px;
     justify-content: flex-end;
     .arrow-right, .arrow-left{
+      padding: 10px;
       width: 61px;
       height: 61px;
       background: #2F3940;

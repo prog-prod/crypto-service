@@ -4,22 +4,365 @@ $lg-breakpoint: map-get($grid-breakpoints, lg);
 $xl-breakpoint: map-get($grid-breakpoints, xl);
 $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 
+@media (max-width: 374px) {
+  .logo {
+    width: 130px;
+  }
+  .exchange-block .exchange-block__footer {
+    .exchange-block__btn {
+      width: 100%;
+    }
+
+    display: block !important;
+  }
+}
+
 @media (max-width: $sm-breakpoint) {
 
 }
 
 @media (max-width: $md-breakpoint) {
+  .custom-checkbox {
+    .checkmark {
+      width: 27px;
+      height: 27px;
 
+      &::after {
+        left: 10px;
+        position: absolute;
+        top: 6px;
+        width: 8px;
+        height: 12px;
+        border: solid #0A4D68;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    &__label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #2D2F34;
+      margin-left: 15px;
+    }
+  }
+  .exchange-block {
+    padding: 25px;
+
+    &__checkbox-group {
+      margin: 20px 0;
+    }
+
+    &__swap-btn {
+      margin: 20px auto !important;
+      width: 40px;
+      height: 40px;
+
+      .icon {
+        width: 20px;
+        transform: rotate(90deg);
+      }
+    }
+
+    &__currency {
+      margin-bottom: 0;
+    }
+
+    &__input-number {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 10px 0;
+      max-width: 100%;
+    }
+
+    .dd-container .dd-select button {
+      padding: 10px 0;
+    }
+
+    .dd-container .dd-select button img {
+      width: 30px;
+      margin-right: 15px;
+    }
+
+    .dd-container .dd-select button small {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #2D2F34;
+    }
+
+    .dd-container .dd-select button small {
+
+      &::after {
+        width: 16px;
+        height: 10px;
+        margin-left: 23px;
+        top: -3px;
+      }
+
+    }
+  }
+  .header-block {
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+
+      color: #FAFAFA;
+    }
+  }
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+  .container, .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  footer {
+    padding: 45px 0 !important;
+
+    .logo {
+      max-width: 190px !important;
+    }
+
+    .footer__links {
+      margin-top: 35px;
+
+      h6 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FAFAFA;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        margin-bottom: 35px;
+
+        li:not(li:last-child) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #A8A8A8;
+        }
+      }
+
+      > div:last-child {
+        ul {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .global-wrapper {
+    padding-bottom: 40px;
+  }
+  .review-block {
+    &__user {
+      gap: 20px;
+    }
+
+    &__date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &__user-name {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    &__user-image {
+      width: 70px;
+    }
+
+    &__row {
+      display: block;
+    }
+
+    &__txt {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &__rating {
+      margin-top: 16px;
+
+      .star-rating {
+        img {
+          width: 15px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    .slider-arrows {
+      gap: 20px;
+    }
+
+    .slider-arrows .arrow-right, .slider-arrows .arrow-left {
+      width: 35px;
+      height: 35px;
+
+      .icon {
+        width: 8px;
+        vertical-align: initial;
+      }
+    }
+  }
+  .about_us {
+    &__block-logo {
+      margin-bottom: 28px;
+    }
+
+    &__block-text {
+      border-left: none;
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+      padding-left: 0;
+      padding-top: 35px;
+      margin: 0;
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+      }
+
+      p:not(p:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .we_guarantee {
+    &__block {
+      display: block;
+      margin: 0 0 25px;
+
+      img {
+        width: 90px;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+  }
+  h1.title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 45px;
+    line-height: 29px;
+  }
+  .multi_exchanges__container {
+    padding: 100px 0;
+
+    h2 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 140%;
+      color: #FAFAFA;
+      margin-bottom: 85px;
+      margin-top: 0;
+    }
+
+    .currency_block {
+      width: 120px;
+      padding: 18px 35px;
+
+      img {
+        width: 50px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    .coins-block {
+      gap: 35px;
+    }
+
+    .coins-block__column .currency_block:not(.currency_block:last-child) {
+      margin-bottom: 35px;
+    }
+  }
 }
+
 @media (max-width: $lg-breakpoint) {
-  .exchange-block{
+  .exchange-block {
+    &__footer {
+      display: flex !important;
+      justify-content: flex-end;
+    }
+
+    &__btn {
+      display: inherit;
+
+      &-block {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+
+    &__rate {
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-right: 0;
+
+    }
+
+    &__input-number {
+      font-weight: 400;
+      padding: 10px 0;
+      max-width: 100%;
+    }
+
+    &__swap-btn {
+      margin: 40px auto;
+
+      .icon {
+        transform: rotate(90deg);
+      }
+    }
+
     &__row {
       display: block;
     }
   }
 }
+
 @media (max-width: $xl-breakpoint) {
-  .about_us{
+  .about_us {
     background-image: none;
+  }
+  .multi_exchanges__container {
+    .coins-block {
+      justify-content: center;
+    }
   }
 }

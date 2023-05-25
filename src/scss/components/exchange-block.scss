@@ -7,9 +7,13 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
 
+  &__checkbox-group{
+    margin: 45px 0;
+  }
   .custom-checkbox {
     margin-top: 15px;
   }
+
   &__swap-btn {
     border: none;
     width: 70px;
@@ -17,12 +21,15 @@
     background: #FAFAFA;
     box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.03), 3px 3px 12px rgba(0, 0, 0, 0.16);
     border-radius: 35px;
+    display: block;
     .icon {
       width: 35px;
     }
   }
+
   &__currency {
     display: flex;
+    margin-bottom: 15px;
 
     &-symbol {
       margin-right: 25px;
@@ -38,21 +45,22 @@
       color: #2D2F34;
     }
   }
+
   &__form {
     height: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     justify-content: space-between;
   }
+
   &__label {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 11px;
   }
-
   &__row {
     display: flex;
     justify-content: space-between;
@@ -77,8 +85,15 @@
     line-height: 44px;
 
   }
-  &__btn{
-    padding: 20px 55px;
+  &__rate{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2D2F34;
+    margin-right: 40px;
+    white-space: nowrap;
+  }
+  &__btn {
     gap: 10px;
     color: $white;
     width: 269px;
@@ -89,35 +104,49 @@
     border-radius: 5px;
     outline: auto !important;
 
-    &:hover{
-      background-color: lighten($blueV2,3%);
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      margin-left: 28px;
+    }
+    &:hover {
+      background-color: lighten($blueV2, 3%);
       color: $white;
     }
+
     &:active {
-      background-color: darken($blueV2,5%);
+      background-color: darken($blueV2, 5%);
       color: $white;
     }
   }
+
   input:focus-visible {
     outline: none; /* Remove default outline */
   }
-  .dd-container{
+
+  .dd-container {
     .dd-options {
       border: none;
       background: #FAFAFA;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       padding: 10px 20px;
+
       .dd-option {
         background: transparent;
-        &:not(&:last-child){
+
+        &:not(&:last-child) {
           border-bottom: 1px solid #A8A8A8;
         }
+
         img {
           width: 40px;
           float: none;
           margin-right: 20px;
         }
+
         .dd-desc {
           position: relative;
           display: inline-block;
@@ -126,46 +155,53 @@
         }
       }
     }
-  .dd-select{
-    border: none;
 
-    .dd-pointer{
-      display: none;
-    }
-    &.dd-open {
-      button small::after {
-        transform:rotate(-180deg);
-      }
-    }
-    button {
+    .dd-select {
       border: none;
-      background: transparent;
-      img {
-        margin-right: 24px;
-        width: 45px;
-      }
-      label{
+
+      .dd-pointer {
         display: none;
       }
-      small{
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 34px;
-        margin-top: 4px;
-        color: #2D2F34;
-        &::after {
-          content: '';
-          display: inline-block;
-          width: 19px;
-          height: 10px;
-          background: url('/images/icons/chevron-down.svg') no-repeat;
-          background-size: 100% 100%;
-          margin-left: 20px;
-          position: relative;
-          top: -4px;
+
+      &.dd-open {
+        button small::after {
+          transform: rotate(-180deg);
+        }
+      }
+
+      button {
+        border: none;
+        background: transparent;
+
+        img {
+          margin-right: 24px;
+          width: 45px;
+        }
+
+        label {
+          display: none;
+        }
+
+        small {
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 34px;
+          margin-top: 4px;
+          color: #2D2F34;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 19px;
+            height: 10px;
+            background: url('/images/icons/chevron-down.svg') no-repeat;
+            background-size: 100% 100%;
+            margin-left: 20px;
+            position: relative;
+            top: -4px;
+          }
         }
       }
     }
-  }
   }
 }
