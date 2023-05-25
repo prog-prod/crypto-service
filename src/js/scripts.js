@@ -39,11 +39,60 @@ $(document).ready(() => {
             selected: false,
             description: "ETH",
             imageSrc: "/images/currencies/eth.svg"
+        },
+        {
+            text: "Litecoin",
+            value: 3,
+            selected: false,
+            description: "LTC",
+            imageSrc: "/images/currencies/ltc.svg"
+        },
+        {
+            text: "Monero",
+            value: 4,
+            selected: false,
+            description: "XMR",
+            imageSrc: "/images/currencies/xmr.svg"
+        },
+        {
+            text: "Dash",
+            value: 5,
+            selected: false,
+            description: "DASH",
+            imageSrc: "/images/currencies/dash.svg"
+        },
+        {
+            text: "ZCash",
+            value: 6,
+            selected: false,
+            description: "ZEC",
+            imageSrc: "/images/currencies/zec.svg"
         }
     ];
-    $('.custom-dropdown').ddslick({
-        data: ddData,
+    $('#exchangeDropdownFrom').ddslick({
+        data: ddData.map(d => {
+            if(d.description === 'BTC'){
+                d.selected = true;
+            }
+            return d;
+        }),
         background: 'transparent',
         defaultSelectedIndex:2
     });
+    $('#exchangeDropdownTo').ddslick({
+        data: ddData.map(d => {
+            if(d.description === 'LTC'){
+                d.selected = true;
+            }
+            return d;
+        }),
+        background: 'transparent',
+        defaultSelectedIndex:2
+    });
+
+    $('.exchange-block__swap-btn').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('swapped');
+    });
+
 })

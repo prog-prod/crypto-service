@@ -3,14 +3,14 @@
         .exchange-block__row
             div.exchange-block__group
                 div.exchange-block__currency
-                    +dropdown()
+                    +dropdown('exchangeDropdownFrom')
                 input.exchange-block__input-number(type='number', value=0.005 )
             button.exchange-block__swap-btn
                 img.icon(src="images/icons/arrows-icons.svg" alt="")
 
             div.exchange-block__group
                 div.exchange-block__currency
-                    +dropdown()
+                    +dropdown('exchangeDropdownTo')
                 input.exchange-block__input-number(type='text', value='≈1.6624')
 
 

@@ -67,6 +67,11 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 
     &__currency {
       margin-bottom: 0;
+      width: 100%;
+      .dd-container, .dd-options {
+        width: 100% !important;
+        max-width: 430px;
+      }
     }
 
     &__input-number {
@@ -77,6 +82,25 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
       max-width: 100%;
     }
 
+    .dd-options {
+      li.dd-option {
+        padding:25px 0 10px;
+        img.dd-option-image {
+          width: 30px;
+        }
+        label {
+          font-size: 18px;
+          line-height: 22px;
+          color: #2D2F34;
+        }
+        small {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #A8A8A8;
+        }
+      }
+    }
     .dd-container .dd-select button {
       padding: 10px 0;
     }
