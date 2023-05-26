@@ -1,0 +1,99 @@
+extends layouts/base.pug
+include mixins/mixins.pug
+
+block header
+    section.header-block
+        .container
+            include components/header
+            .row
+                .col-12
+                    h2 Торгуйте с легкостью, быстро и безопасно
+                    div.d-flex.justify-content-center.w-100
+                        include components/exchange-block-3-stage
+
+block content
+    section.multi_exchanges
+        div.container
+            .row.multi_exchanges__container
+                .col-xl-6
+                    h2 Разнонаправленные
+                        br
+                        | обмены
+                .col-xl-6
+                    .coins-block
+                        .coins-block__column
+                            +currency_block('TRX','trx.svg')
+                            +currency_block('BTC','btc.svg')
+                            +currency_block('LTC','ltc.svg')
+                        .coins-block__column
+                            +currency_block('USDT','usdt.svg')
+                            +currency_block('ETH','eth.svg')
+                            +currency_block('XMR','xmr.svg')
+    section.we_guarantee
+        div.container
+
+            .row
+                .col-12
+                    h1.title Мы гарантируем
+            .row
+                .col-lg-6
+                    .we_guarantee__block
+                        img(src=`images/free-icon-protection-6601043.svg`)
+                        .we_guarantee__block-text
+                            h3 Безопасность данных
+                            p Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.
+                .col-lg-6
+                    .we_guarantee__block
+                        img(src=`images/free-icon-protection-6601043_2.svg`)
+                        .we_guarantee__block-text
+                            h3 Безопасность данных
+                            p Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.
+            .row
+                .col-lg-6
+                    .we_guarantee__block
+                        img(src=`images/free-icon-protection-6601043_3.svg`)
+                        .we_guarantee__block-text
+                            h3 Безопасность данных
+                            p Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.
+                .col-lg-6
+                    .we_guarantee__block
+                        img(src=`images/free-icon-protection-6601043_4.svg`)
+                        .we_guarantee__block-text
+                            h3 Безопасность данных
+                            p Данные шифруются перед отправкой на сервер, злоумышленники не смогут этим воспользоваться.
+    section.about_us
+        div.container
+            .row
+                .col-12
+                    h1.title Про нас
+            .row
+                .col-xl-5
+                    div.about_us__block-logo
+                        img(src=`images/logo.png`)
+                .col-xl-6
+                    div.about_us__block-text
+                        p С нами выгодно работать, для наших партнеров у нас на сайте действует партнерская программа, благодаря которой вы можете зарабатывать на нашем сервисе, получать приятные бонусы и отличные скидки при обмене, вам просто
+                        p Это ваш надежный партнер по обмену электронных валют, мы гарантируем качество и скорость обслуживания, и всегда готовы пойти навстречу нашим клиентам в любой ситуации.
+
+    section.reviews
+        div.container
+            .row
+                .col-8
+                    h1.title Отзывы о нас
+                .col-4
+                    .slider-arrows
+                        button.btn.arrow-left
+                            +icon('chevron-left.svg')
+                        button.btn.arrow-right
+                            +icon('chevron-right.svg')
+
+
+            .row
+                .col-md-12
+                    div.slider
+                        +reviewBlock("user_1_img.png", "Harris Honko","14.05.2023", 3, "Я очень доволен использованием этого криптообменника! Он был быстрым и надежным способом для меня обменять мои криптовалюты. Весь процесс был интуитивно понятным, и я получил свои обменные монеты в течение нескольких минут. Кроме того, обменник обеспечивал высокий уровень безопасности, что для меня является важным фактором при работе с криптовалютой. Я определенно рекомендую этот криптообменник тем, кто ищет удобное и надежное место для обмена криптовалют.")
+                        +reviewBlock("user_2_img.png", "Keny Sandro","20.01.2023", 3, "Очень доволен работой этого криптообменника! Процесс обмена был очень простым и понятным, а команда поддержки клиентов была на высоте - оперативно и профессионально решили все мои вопросы. Кроме того, я оценил высокую скорость обработки моей транзакции. Буду рекомендовать этот криптообменник своим друзьям и знакомым!")
+                        +reviewBlock("user_1_img.png", "Harris Honko","14.05.2023", 3, "Я очень доволен использованием этого криптообменника! Он был быстрым и надежным способом для меня обменять мои криптовалюты. Весь процесс был интуитивно понятным, и я получил свои обменные монеты в течение нескольких минут. Кроме того, обменник обеспечивал высокий уровень безопасности, что для меня является важным фактором при работе с криптовалютой. Я определенно рекомендую этот криптообменник тем, кто ищет удобное и надежное место для обмена криптовалют.")
+                        +reviewBlock("user_2_img.png", "Keny Sandro","20.01.2023", 3, "Очень доволен работой этого криптообменника! Процесс обмена был очень простым и понятным, а команда поддержки клиентов была на высоте - оперативно и профессионально решили все мои вопросы. Кроме того, я оценил высокую скорость обработки моей транзакции. Буду рекомендовать этот криптообменник своим друзьям и знакомым!")
+
+

@@ -1,17 +1,17 @@
 .exchange-block
-    form.exchange-block__form
+    form.exchange-block__form(method="GET" action="/exchange.html")
         .exchange-block__row
             div.exchange-block__group
                 div.exchange-block__currency
-                    +dropdown('exchangeDropdownFrom')
-                input.exchange-block__input-number(type='number', value=0.005 )
+                    +dropdown('exchangeDropdownFrom', 'currency_from')
+                input.exchange-block__input-number(type='number' value=0.005 name='from')
             button.exchange-block__swap-btn
                 img.icon(src="images/icons/arrows-icons.svg" alt="")
 
             div.exchange-block__group
                 div.exchange-block__currency
-                    +dropdown('exchangeDropdownTo')
-                input.exchange-block__input-number(type='text', value='≈1.6624')
+                    +dropdown('exchangeDropdownTo', 'currency_to')
+                input.exchange-block__input-number(type='text' name='to' value='≈1.6624')
 
 
         div.exchange-block__checkbox-group

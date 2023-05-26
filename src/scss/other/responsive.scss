@@ -4,21 +4,99 @@ $lg-breakpoint: map-get($grid-breakpoints, lg);
 $xl-breakpoint: map-get($grid-breakpoints, xl);
 $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 
-@media (max-width: 374px) {
-  .logo {
-    width: 130px;
-  }
-  .exchange-block .exchange-block__footer {
-    .exchange-block__btn {
-      width: 100%;
-    }
 
-    display: block !important;
+@media (max-width: $xl-breakpoint) {
+  .about_us {
+    background-image: none;
+  }
+  .multi_exchanges__container {
+    .coins-block {
+      justify-content: center;
+    }
   }
 }
 
-@media (max-width: $sm-breakpoint) {
+@media (max-width: $lg-breakpoint) {
+  .exchange-block {
 
+    &__address {
+      &-title {
+        font-size: 18px;
+        line-height: 15px;
+      }
+
+      &-value {
+        font-size: 16px;
+        line-height: 15px;
+      }
+
+      &-desc {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__footer {
+      display: flex !important;
+      justify-content: flex-end;
+    }
+
+    &__wallet-address {
+      margin-bottom: 10px;
+    }
+
+    &__arrow {
+      text-align: center;
+      margin: 30px auto;
+
+      .icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      display: inherit;
+
+      &-block {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+
+    &__rate {
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-right: 0;
+
+    }
+
+    &__input-number {
+      font-weight: 400;
+      padding: 10px 0;
+      max-width: 100%;
+    }
+
+    &__swap-btn {
+      margin: 40px auto;
+
+      .icon {
+        transform: rotate(90deg);
+      }
+      &.swapped {
+        .icon {
+          transform: rotate(270deg);
+        }
+      }
+    }
+
+    &__row {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: $md-breakpoint) {
@@ -50,6 +128,66 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
   .exchange-block {
     padding: 25px;
 
+    &__btn {
+      display: inherit;
+      width: 180px;
+      height: 40px;
+      padding: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+
+      .icon {
+        width: 17px;
+      }
+
+      &-block {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+
+    &__address {
+      &-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 10px;
+      }
+
+      &-value {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 10px;
+      }
+
+      &-desc {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0;
+      }
+    }
+
+    &__status {
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 20px;
+      width: 141px;
+      height: 31px;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-right: 0;
+    }
+
     &__checkbox-group {
       margin: 20px 0;
     }
@@ -65,13 +203,48 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
       }
     }
 
+    &__group {
+      .exchange-block__label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
     &__currency {
       margin-bottom: 0;
       width: 100%;
+
       .dd-container, .dd-options {
         width: 100% !important;
         max-width: 430px;
       }
+
+      &-symbol {
+        width: 35px;
+        margin-right: 15px;
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    &__arrow {
+      margin: 20px auto;
+
+      .icon {
+        width: 30px;
+      }
+    }
+
+    &__input {
+      width: 95px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
     }
 
     &__input-number {
@@ -84,15 +257,18 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 
     .dd-options {
       li.dd-option {
-        padding:25px 0 10px;
+        padding: 25px 0 10px;
+
         img.dd-option-image {
           width: 30px;
         }
+
         label {
           font-size: 18px;
           line-height: 22px;
           color: #2D2F34;
         }
+
         small {
           font-weight: 500;
           font-size: 14px;
@@ -101,6 +277,7 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
         }
       }
     }
+
     .dd-container .dd-select button {
       padding: 10px 0;
     }
@@ -337,56 +514,12 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
   }
 }
 
-@media (max-width: $lg-breakpoint) {
-  .exchange-block {
-    &__footer {
-      display: flex !important;
-      justify-content: flex-end;
-    }
+@media (max-width: $sm-breakpoint) {
 
-    &__btn {
-      display: inherit;
-
-      &-block {
-        text-align: left;
-        display: inline-block;
-      }
-    }
-
-    &__rate {
-      display: inline-block;
-      margin-bottom: 15px;
-      margin-right: 0;
-
-    }
-
-    &__input-number {
-      font-weight: 400;
-      padding: 10px 0;
-      max-width: 100%;
-    }
-
-    &__swap-btn {
-      margin: 40px auto;
-
-      .icon {
-        transform: rotate(90deg);
-      }
-    }
-
-    &__row {
-      display: block;
-    }
-  }
 }
 
-@media (max-width: $xl-breakpoint) {
-  .about_us {
-    background-image: none;
-  }
-  .multi_exchanges__container {
-    .coins-block {
-      justify-content: center;
-    }
+@media (max-width: 374px) {
+  .logo {
+    width: 130px;
   }
 }

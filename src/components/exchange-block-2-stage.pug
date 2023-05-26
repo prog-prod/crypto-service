@@ -1,0 +1,34 @@
+.exchange-block
+    form.exchange-block__form(method="GET" action="/create_order.html")
+        .exchange-block__row
+            div.exchange-block__group
+                div.exchange-block__label Вы отдаете
+                div.exchange-block__currency
+                    input(type='hidden' value='BTC' name='currency_from')
+                    input.exchange-block__input(type='number' name='from' value=0.005 readonly)
+                    div.d-flex
+                        img.exchange-block__currency-symbol(src="images/currencies/btc.svg")
+                        div.exchange-block__currency-text BTC
+
+            div.exchange-block__arrow
+                img.icon(src="images/icons/chevron-icon.svg" alt="")
+
+            div.exchange-block__group
+                div.exchange-block__label Вы получите
+                div.exchange-block__currency
+                    input(type='hidden' value='LTC' name='currency_to')
+                    input.exchange-block__input(type='text' name='to' value='≈1.6624' readonly)
+                    div.d-flex.align-items-center
+                        img.exchange-block__currency-symbol(src="images/currencies/ltc.svg")
+                        div.exchange-block__currency-text LTC
+
+        .exchange-block__row
+            input.text-input.exchange-block__wallet-address(type='text' name='wallet' placeholder='Введите адрес вашего LTC кошелька' )
+        .exchange-block__row.justify-content-end
+            div.exchange-block__checkbox-group.my-lg-0.mb-4.me-lg-5
+                +checkbox('Я согласен с правилами обмена', true)
+            .exchange-block__row.exchange-block__footer.justify-content-end
+                div.exchange-block__btn-block
+                    button.btn.exchange-block__btn(type='submit')
+                        | Обменять
+                        img.icon(src="/images/icons/arrow-right.svg" alt="")

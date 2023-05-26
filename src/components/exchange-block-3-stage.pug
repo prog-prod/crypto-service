@@ -1,0 +1,44 @@
+.exchange-block
+    form.exchange-block__form(method="GET" action="/")
+        .exchange-block__row.justify-content-lg-start.mb-md-5
+            h4.exchange-block__title Заявка №1697084
+            .exchange-block__status Ожидание оплаты
+        .exchange-block__row
+            div.exchange-block__group
+                div.exchange-block__label Вы отдаете
+                div.exchange-block__currency
+                    input(type='hidden' value='BTC' name='currency_from')
+                    input.exchange-block__input(type='number' name='from' value=0.005 readonly)
+                    div.d-flex
+                        img.exchange-block__currency-symbol(src="images/currencies/btc.svg")
+                        div.exchange-block__currency-text BTC
+
+            div.exchange-block__arrow
+                img.icon(src="images/icons/chevron-icon.svg" alt="")
+
+            div.exchange-block__group
+                div.exchange-block__label Вы получите
+                div.exchange-block__currency
+                    input(type='hidden' value='LTC' name='currency_to')
+                    input.exchange-block__input(type='text' name='to' value='≈1.6624' readonly)
+                    div.d-flex.align-items-center
+                        img.exchange-block__currency-symbol(src="images/currencies/ltc.svg")
+                        div.exchange-block__currency-text LTC
+        div.exchange-block__address-blocks
+            div.d-block.d-md-flex.justify-content-between
+                div.exchange-block__address-txt-block
+                    h6.exchange-block__address-title Кошелек для оплаты:
+                    .exchange-block__address-value bc1q29z3js84j0wd27vchf7d0rzakul3yeu5h9lly2
+                    small.exchange-block__address-desc Для завершения транзакции необходимо внести на этот кошелек 0,1 BTC.
+                button.exchange-block__address-cp-btn.d-none.d-md-block(type='button')
+                    +icon('copy.svg')
+
+            div
+                h6.exchange-block__address-title Кошелек получателя:
+                .exchange-block__address-value 3CDJNfdWX8m2NwuGUV3nhXHXEeLygMXoAj
+                small.exchange-block__address-desc На этот кошелек будет зачислен платеж 1.6624 LTC
+        .exchange-block__row.exchange-block__footer.justify-content-end
+            div.exchange-block__btn-block
+                button.btn.exchange-block__btn(type='submit')
+                    | Обменять
+                    img.icon(src="/images/icons/arrow-right.svg" alt="")
