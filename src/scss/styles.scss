@@ -1,11 +1,6 @@
 @import "other/_variables";
 @import "other/fonts";
 
-$blue: #0A4D68;
-$white: #FAFAFA;
-$dark: #2D2F34;
-$blueV2: #0A4D68;
-
 // Global
 @import "other/global";
 
@@ -17,5 +12,4 @@ $blueV2: #0A4D68;
 @import "components/checkbox";
 
 // Pages
-@import "other/main";
 @import "other/responsive";

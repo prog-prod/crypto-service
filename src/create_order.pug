@@ -1,10 +1,9 @@
 extends layouts/base.pug
-include mixins/mixins.pug
 
 block header
     section.header-block
         .container
-            include components/header
+            +header('index.html')
             .row
                 .col-12
                     h2 Торгуйте с легкостью, быстро и безопасно

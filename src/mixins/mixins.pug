@@ -31,7 +31,8 @@ mixin icon(icon_name, alt)
 mixin logo(classes, alt)
     - classes = classes || ''
     - alt = alt || ''
-    img.logo(src=`/images/logo.svg` class=classes alt=alt)
+    a(href='/')
+        img.logo(src=`/images/logo.svg` class=classes alt=alt)
 
 mixin checkbox(label, checked)
     label.custom-checkbox
@@ -43,4 +44,78 @@ mixin checkbox(label, checked)
 mixin dropdown(id, name)
     div.custom-dropdown(id=id, name=name)
 
+mixin renderNavbar(pages, currentPage)
+    ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        each page in pages
+            - const isActive = (page.link === currentPage || (currentPage === '/' && page.link === 'index.html')) ? 'active' : ''
+            li.nav-item
+                a.nav-link(class=isActive, aria-current='page', href=page.link)= page.title
 
+mixin header(currentPage)
+    header
+        nav.navbar.navbar-expand-lg
+            a.navbar-brand(href='/')
+                img.logo(src='/images/logo.svg', alt='Logo')
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                .navbar-toggler#navbarToggler
+                    span.line
+                    span.line
+                    span.line
+            .collapse.navbar-collapse(id='navbarSupportedContent')
+                +renderNavbar([
+                    {title: 'Главная', link: 'index.html'},
+                    {title: 'Контакты', link: 'contacts.html'},
+                    {title: 'Отзывы', link: 'reviews.html'},
+                    {title: 'Правила', link: 'rules.html'},
+                    {title: 'FAQ', link: 'faq.html'}
+                ], currentPage)
+
+mixin footer()
+    footer.footer
+        .row
+            .col-7.col-lg-6.order-0
+                +logo()
+            .col-lg-4.order-2.order-lg-1.mt-4.mt-lg-0
+                a.btn.btn-block(href='/contacts.html') Написать нам
+            .col-5.col-lg-2.order-1.order-lg-2.d-flex.align-items-lg-start.align-items-center.justify-content-end.justify-content-lg-around
+                div
+                    a(href=`mailto:cryptoinfo@gmail.com`).btn
+                        +icon('message.svg')
+                div
+                    a(href='tg://resolve?domain=cryptoSupport').btn.ms-4.ms-md-4.ms-lg-2
+                        +icon('telegram.svg')
+        .row.footer__links
+            .col-md-4
+                h6 Общее
+                ul.list-unstyled
+                    li
+                        a(href="/") Главная
+                    li
+                        a(href="/reviews.html") Отзывы
+                    li
+                        a(href="/contacts.html") Контакты
+                    li
+                        a(href="/faq.html") FAQ
+            .col-md-4
+                h6 Документация
+                ul.list-unstyled
+                    li
+                        a(href="/privacy-policy.html") Политика конфиденциальности
+                    li
+                        a(href="/aml_kyc.html") AML / KYC
+                    li
+                        a(href="/user-agreement.html") Пользовательское соглашение
+                    li
+                        a(href="/rules.html") Правила
+            .col-md-2.offset-md-2
+                h6 Рабочие часы
+                ul.list-unstyled
+                    li Сервис работает 24/7
+                    li Тех. поддержка 24/7
+
+mixin renderNav(pages)
+    nav.btn-nav
+        ul.btn-nav__navbar-nav
+            each page in pages
+                li.nav-item
+                    a.nav-link(class=page.active, aria-current='page', href=page.link)= page.title

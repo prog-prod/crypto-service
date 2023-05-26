@@ -16,7 +16,9 @@ $(document).ready(() => {
         }]
 
     }).on('setPosition', function (event, slick) {
-        slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        setTimeout(() => {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        }, 100);
         $('.slider-arrows .arrow-left').click(function () {
             slick.slickPrev();
         });
