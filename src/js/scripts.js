@@ -94,5 +94,17 @@ $(document).ready(() => {
         e.preventDefault();
         $(this).toggleClass('swapped');
     });
+    $('.exchange-block__address-cp-btn').click(function () {
+        const copyText = $(this).closest('.exchange-block__address-blocks').find('.exchange-block__address-value').text(); // Replace with the text you want to copy
+        const textarea = $('<textarea>', {val: copyText, css: {position: 'fixed', opacity: 0}}).appendTo('body');
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
 
+        const toastLiveExample = document.getElementById('liveToast')
+        $(toastLiveExample).find('.toast-body').text("Текст скопирован.");
+
+        const toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
+    });
 })
