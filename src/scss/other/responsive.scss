@@ -1,9 +1,4 @@
-$sm-breakpoint: map-get($grid-breakpoints, sm);
-$md-breakpoint: map-get($grid-breakpoints, md);
-$lg-breakpoint: map-get($grid-breakpoints, lg);
-$xl-breakpoint: map-get($grid-breakpoints, xl);
-$xxl-breakpoint: map-get($grid-breakpoints, xxl);
-
+@import "_variables";
 
 @media (max-width: $xl-breakpoint) {
   .about_us {
@@ -100,6 +95,24 @@ $xxl-breakpoint: map-get($grid-breakpoints, xxl);
 }
 
 @media (max-width: $md-breakpoint) {
+  .contact-form {
+    h4 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    input {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .btn {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
   .global-wrapper{
     padding-top: 65px;
     padding-bottom: 40px;

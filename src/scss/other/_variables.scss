@@ -7,6 +7,13 @@ $grid-breakpoints: (
         xxl: 1400px
 ) !default;
 
+$sm-breakpoint: map-get($grid-breakpoints, sm);
+$md-breakpoint: map-get($grid-breakpoints, md);
+$lg-breakpoint: map-get($grid-breakpoints, lg);
+$xl-breakpoint: map-get($grid-breakpoints, xl);
+$xxl-breakpoint: map-get($grid-breakpoints, xxl);
+
+
 $blue: #0A4D68;
 $white: #FAFAFA;
 $dark: #2D2F34;

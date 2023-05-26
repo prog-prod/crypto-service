@@ -9,7 +9,12 @@ body {
   /* identical to box height */
   color: $white;
 }
-
+header .navbar button .navbar-toggler{
+  border: none;
+}
+.navbar-toggler{
+  border: none;
+}
 .logo{
   max-width: 224px;
 }
@@ -126,6 +131,49 @@ h1.title {
   }
   > :last-child {
     margin-bottom: 0;
+  }
+}
+.contact-form{
+  padding:25px 25px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  .btn {
+    width: 100%;
+    background: rgba(10, 77, 104, 0.25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(17.5px);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FAFAFA;
+    border-radius: 5px;
+  }
+
+  h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+  }
+  input.text-input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    border-bottom-color: #BCBCBC;
+    padding:10px;
+    margin-bottom: 40px;
+
+    &::placeholder {
+      color: #BCBCBC;
+    }
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
 

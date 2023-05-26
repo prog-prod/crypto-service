@@ -1,0 +1,37 @@
+extends layouts/base.pug
+
+block head
+    link(rel='stylesheet', href='/css/contacts.css')
+
+block header
+    .container
+        +header('privacy-policy.html')
+
+block content
+    .contact-page
+        div.container
+            .row
+                .col-12
+                    h1.title Наши контакты
+            .row
+                .col-md-6.order-2.order-md-1
+                    .contact-form
+                        h4 Написать нам
+                        input.text-input(type='text' placeholder='Ваш e-mail*' required)
+                        input.text-input(type='text' placeholder='Ваше сообщение*' required)
+                        button.btn Написать
+                .col-md-6.order-1.order-md-2
+                    .contact-info
+                        .contact-info__item
+                            .contact-info__icon
+                                +icon('message.svg')
+                            .contact-info__txt
+                                h6 E-mail:
+                                span cryptoinfo@gmail.com
+                        .contact-info__item
+                            .contact-info__icon
+                                +icon('telegram.svg')
+                            .contact-info__txt
+                                h6 Telegram:
+                                span @cryptoSupport
+                        p Все ваши отзывы и предложения по работе обменного сервиса очень важны для нас.
