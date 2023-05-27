@@ -157,3 +157,111 @@ h1.title{
     }
   }
 }
+
+@media (max-width: $xl-breakpoint) {
+  .about_us {
+    background-image: none;
+  }
+  .multi_exchanges__container {
+    .coins-block {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $md-breakpoint) {
+  .about_us {
+    &__block-logo {
+      margin-bottom: 28px;
+    }
+
+    &__block-text {
+      border-left: none;
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+      padding-left: 0;
+      padding-top: 35px;
+      margin: 0;
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+      }
+
+      p:not(p:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .we_guarantee {
+    &__block {
+      display: block;
+      margin: 0 0 25px;
+
+      img {
+        width: 90px;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+  }
+  .header-block {
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+
+      color: #FAFAFA;
+    }
+  }
+  .multi_exchanges__container {
+    padding: 100px 0;
+
+    h2 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 140%;
+      color: #FAFAFA;
+      margin-bottom: 85px;
+      margin-top: 0;
+    }
+
+    .currency_block {
+      width: 120px;
+      padding: 18px 35px;
+
+      img {
+        width: 50px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    .coins-block {
+      gap: 35px;
+    }
+
+    .coins-block__column .currency_block:not(.currency_block:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+}

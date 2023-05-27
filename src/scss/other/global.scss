@@ -210,8 +210,6 @@ h1.title {
       margin: 0;
     }
     .accordion-body{
-      background: rgba(60, 60, 77, 0.08);
-      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.16), -3px -3px 12px rgba(255, 255, 255, 0.03);
       border-radius: 10px;
       padding: 25px;
       margin: 0;
@@ -289,7 +287,9 @@ h1.title {
     }
   }
 }
-
+.slick-arrow{
+  display: none !important;
+}
 .slider-arrows{
   display: flex;
   gap:25px;

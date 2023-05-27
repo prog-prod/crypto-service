@@ -1,3 +1,5 @@
+@import "../other/_variables";
+
 .footer{
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   padding: 95px 0 130px 0;
@@ -46,6 +48,44 @@
           &:hover{
             color: darken(#A8A8A8, 5%);
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $md-breakpoint) {
+  footer {
+    padding: 45px 0 !important;
+
+    .logo {
+      max-width: 190px !important;
+    }
+
+    .footer__links {
+      margin-top: 35px;
+
+      h6 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FAFAFA;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        margin-bottom: 35px;
+
+        li:not(li:last-child) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #A8A8A8;
+        }
+      }
+
+      > div:last-child {
+        ul {
+          margin-bottom: 0;
         }
       }
     }
