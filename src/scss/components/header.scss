@@ -2,17 +2,17 @@ header {
   padding-top: 30px;
 
   .navbar {
-    .navbar-toggler:focus{
+    .navbar-toggler:focus {
       box-shadow: none !important;
-
     }
+
     button {
       .navbar-toggler {
         display: flex;
         flex-direction: column;
         width: 30px;
         cursor: pointer;
-        padding:0;
+        padding: 0;
         align-items: flex-end;
       }
 
@@ -24,19 +24,22 @@ header {
         text-align: right;
         margin-bottom: 6px;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        &:nth-child(2){
+
+        &:nth-child(2) {
           width: 80%;
         }
+
         &:last-child {
           width: 60%;
         }
       }
 
-      &[aria-expanded=true]{
+      &[aria-expanded=true] {
         .line {
           margin-bottom: 0px;
           width: 100%;
         }
+
         .navbar-toggler .line:nth-child(1) {
           transform: rotate(-45deg) translate(2px, 3px);
         }

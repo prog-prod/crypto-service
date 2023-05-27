@@ -2,7 +2,7 @@
 $(document).ready(() => {
     $(".reviews .slider").slick({
         infinite: false,
-        arrows: false,
+        arrows: true,
         autoplay:false,
         dots:false,
         slidesToShow: 2,
@@ -19,12 +19,21 @@ $(document).ready(() => {
         setTimeout(() => {
             slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         }, 100);
-        $('.slider-arrows .arrow-left').click(function () {
-            slick.slickPrev();
-        });
-        $('.slider-arrows .arrow-right').click(function () {
-            slick.slickNext();
-        });
+        if(slick.$prevArrow.hasClass('slick-disabled')) {
+            $('.slider-arrows .arrow-left').addClass('slick-disabled')
+        }
+        $('.slider-arrows .arrow-left').click(() => slick.slickPrev());
+        $('.slider-arrows .arrow-right').click(() => slick.slickNext());
+
+    }).on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        const arrows = $('.slider-arrows .btn');
+        arrows.removeClass('slick-disabled');
+        if(slick.$prevArrow.hasClass('slick-disabled')) {
+            arrows.filter('.arrow-left').addClass('slick-disabled')
+        }
+        if(slick.$nextArrow.hasClass('slick-disabled')) {
+            arrows.filter('.arrow-right').addClass('slick-disabled')
+        }
     });
 
     var ddData = [

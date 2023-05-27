@@ -1,4 +1,4 @@
-@import "_variables";
+@import "other/_variables";
 
 @media (max-width: $xl-breakpoint) {
   .about_us {
@@ -81,6 +81,7 @@
       .icon {
         transform: rotate(90deg);
       }
+
       &.swapped {
         .icon {
           transform: rotate(270deg);
@@ -95,25 +96,73 @@
 }
 
 @media (max-width: $md-breakpoint) {
-  .contact-form {
+  .pagination {
+    &__item {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+  .accordion {
+    &-item {
+      margin-bottom: 25px;
+      background: rgba(60, 60, 77, 0.08);
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.16), -3px -3px 12px rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+
+      .accordion-header {
+        margin: 0;
+      }
+
+      .accordion-button {
+        border: none;
+        color: white;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+
+      }
+
+      .accordion-body {
+        padding: 25px;
+        margin: 0px auto;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        p {
+          margin: 0 0 25px;
+        }
+      }
+    }
+  }
+  .custom-form {
     h4 {
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
     }
+
     input {
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
     }
+
     .btn {
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
     }
   }
-  .global-wrapper{
+  .global-wrapper {
     padding-top: 65px;
     padding-bottom: 40px;
   }
@@ -137,6 +186,7 @@
       color: #FAFAFA;
 
     }
+
     h3 {
       font-style: normal;
       font-weight: 500;
@@ -147,6 +197,7 @@
 
       color: #FAFAFA;
     }
+
     p {
       font-weight: 400;
       font-size: 12px;
@@ -157,13 +208,15 @@
       color: #FAFAFA;
     }
   }
-  .btn-nav{
+  .btn-nav {
     &__navbar-nav {
       display: block;
-      .nav-item{
+
+      .nav-item {
         margin-bottom: 15px;
       }
-      .nav-link{
+
+      .nav-link {
         display: inline-block !important;
         font-weight: 400;
         font-size: 14px;
@@ -484,19 +537,17 @@
       }
     }
   }
-  .reviews {
-    .slider-arrows {
-      gap: 20px;
-    }
+  .slider-arrows {
+    gap: 20px;
+  }
 
-    .slider-arrows .arrow-right, .slider-arrows .arrow-left {
-      width: 35px;
-      height: 35px;
+  .slider-arrows .arrow-right, .slider-arrows .arrow-left {
+    width: 35px;
+    height: 35px;
 
-      .icon {
-        width: 8px;
-        vertical-align: initial;
-      }
+    .icon {
+      width: 8px;
+      vertical-align: initial;
     }
   }
   .about_us {
