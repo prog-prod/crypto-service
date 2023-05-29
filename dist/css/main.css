@@ -1,0 +1,237 @@
+.header-block {
+  background: url("../images/main-header-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding-bottom: 144px;
+}
+.header-block h2 {
+  text-align: center;
+  max-width: 620px;
+  margin: 94px auto 70px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+  color: #FAFAFA;
+}
+
+.multi_exchanges__container {
+  padding: 26px 0 140px;
+}
+.multi_exchanges__container h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 140%;
+  color: #fafafa;
+  margin-top: 110px;
+  margin-bottom: 120px;
+}
+.multi_exchanges__container .currency_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 65px;
+  gap: 10px;
+  border-radius: 5px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.5px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+.multi_exchanges__container .currency_block p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.multi_exchanges__container .coins-block {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  gap: 50px;
+}
+.multi_exchanges__container .coins-block__column {
+  position: relative;
+}
+.multi_exchanges__container .coins-block__column .currency_block:not(.currency_block:last-child) {
+  margin-bottom: 50px;
+}
+.multi_exchanges__container .coins-block__column:first-child {
+  top: -34px;
+}
+.multi_exchanges__container .coins-block__column:first-child .currency_block:first-child {
+  background: linear-gradient(360deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 5px 5px #334a56;
+}
+.multi_exchanges__container .coins-block__column:first-child .currency_block:first-child p {
+  color: #7A7A7A;
+}
+.multi_exchanges__container .coins-block__column:last-child {
+  top: 34px;
+}
+.multi_exchanges__container .coins-block__column:last-child .currency_block:last-child {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60.05%);
+  filter: drop-shadow(0px -5px 20px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px -5px 5px #334a56;
+}
+.multi_exchanges__container .coins-block__column:last-child .currency_block:last-child p {
+  color: #7A7A7A;
+}
+
+h1.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 78px;
+  color: #FAFAFA;
+  margin-bottom: 70px;
+}
+
+.we_guarantee__block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 25px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px 8px 20px 8px;
+}
+.we_guarantee__block h3 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #FAFAFA;
+}
+.we_guarantee__block p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FAFAFA;
+}
+
+.about_us {
+  padding: 80px 0;
+  background: url("/images/about-us-bg.png") no-repeat;
+  background-position: center right;
+  background-size: auto 90%;
+}
+.about_us__block {
+  align-items: center;
+}
+.about_us__block-logo img {
+  max-width: 500px;
+  width: 100%;
+}
+.about_us__block-text {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  margin-left: 35px;
+  padding-left: 35px;
+  margin-right: 50px;
+}
+.about_us__block-text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  max-width: 560px;
+  /* or 25px */
+  color: #FFFFFF;
+}
+.about_us__block-text p:not(p:last-child) {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1200px) {
+  .about_us {
+    background-image: none;
+  }
+  .multi_exchanges__container .coins-block {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .about_us__block-logo {
+    margin-bottom: 28px;
+  }
+  .about_us__block-text {
+    border-left: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 0;
+    padding-top: 35px;
+    margin: 0;
+  }
+  .about_us__block-text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .about_us__block-text p:not(p:last-child) {
+    margin-bottom: 30px;
+  }
+  .we_guarantee__block {
+    display: block;
+    margin: 0 0 25px;
+  }
+  .we_guarantee__block img {
+    width: 90px;
+    margin-bottom: 15px;
+  }
+  .we_guarantee__block h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .we_guarantee__block p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .header-block h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FAFAFA;
+  }
+  .multi_exchanges__container {
+    padding: 100px 0;
+  }
+  .multi_exchanges__container h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #FAFAFA;
+    margin-bottom: 85px;
+    margin-top: 0;
+  }
+  .multi_exchanges__container .currency_block {
+    width: 120px;
+    padding: 18px 35px;
+  }
+  .multi_exchanges__container .currency_block img {
+    width: 50px;
+  }
+  .multi_exchanges__container .currency_block p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .multi_exchanges__container .coins-block {
+    gap: 35px;
+  }
+  .multi_exchanges__container .coins-block__column .currency_block:not(.currency_block:last-child) {
+    margin-bottom: 35px;
+  }
+}

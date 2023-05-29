@@ -36,44 +36,50 @@
             <h2>Торгуйте с легкостью, быстро и безопасно</h2>
             <div class="d-flex justify-content-center w-100">
               <div class="exchange-block">
-                <form class="exchange-block__form" method="GET" action="/exchange.html">
+                <form class="exchange-block__form" method="GET" action="/">
+                  <div class="exchange-block__row justify-content-lg-start mb-md-5">
+                    <h4 class="exchange-block__title">Заявка №1697084</h4>
+                    <div class="exchange-block__status">Ожидание оплаты</div>
+                  </div>
                   <div class="exchange-block__row">
                     <div class="exchange-block__group">
+                      <div class="exchange-block__label">Вы отдаете</div>
                       <div class="exchange-block__currency">
-                        <div class="custom-dropdown" id="exchangeDropdownFrom" name="currency_from"></div>
+                        <input type="hidden" value="BTC" name="currency_from">
+                        <input class="exchange-block__input" type="number" name="from" value="0.005" readonly>
+                        <div class="d-flex"><img class="exchange-block__currency-symbol" src="images/currencies/btc.svg">
+                          <div class="exchange-block__currency-text">BTC</div>
+                        </div>
                       </div>
-                      <input class="exchange-block__input-number" type="number" value="0.005" name="from">
                     </div>
-                    <button class="exchange-block__swap-btn"><img class="icon" src="images/icons/arrows-icons.svg" alt=""></button>
+                    <div class="exchange-block__arrow"><img class="icon" src="images/icons/chevron-icon.svg" alt=""></div>
                     <div class="exchange-block__group">
+                      <div class="exchange-block__label">Вы получите</div>
                       <div class="exchange-block__currency">
-                        <div class="custom-dropdown" id="exchangeDropdownTo" name="currency_to"></div>
+                        <input type="hidden" value="LTC" name="currency_to">
+                        <input class="exchange-block__input" type="text" name="to" value="≈1.6624" readonly>
+                        <div class="d-flex align-items-center"><img class="exchange-block__currency-symbol" src="images/currencies/ltc.svg">
+                          <div class="exchange-block__currency-text">LTC</div>
+                        </div>
                       </div>
-                      <input class="exchange-block__input-number" type="text" name="to" value="≈1.6624">
                     </div>
                   </div>
-                  <div class="exchange-block__checkbox-group">
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
+                  <div class="exchange-block__address-blocks">
+                    <div class="d-block d-md-flex justify-content-between">
+                      <div class="exchange-block__address-txt-block">
+                        <h6 class="exchange-block__address-title">Кошелек для оплаты:</h6>
+                        <div class="exchange-block__address-value">bc1q29z3js84j0wd27vchf7d0rzakul3yeu5h9lly2</div><small class="exchange-block__address-desc">Для завершения транзакции необходимо внести на этот кошелек 0,1 BTC.</small>
                       </div>
-                      <div class="custom-checkbox__label">Я согласен с правилами обмена</div>
-                    </label>
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                      </div>
-                      <div class="custom-checkbox__label">Я согласен с АМЛ</div>
-                    </label>
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                      </div>
-                      <div class="custom-checkbox__label">Не запоминать введенные данные</div>
-                    </label>
+                      <button class="exchange-block__address-cp-btn d-none d-md-block" type="button"><img class="icon" src="/images/icons/copy.svg" alt=""/>
+                      </button>
+                    </div>
+                    <div>
+                      <h6 class="exchange-block__address-title">Кошелек получателя:</h6>
+                      <div class="exchange-block__address-value">3CDJNfdWX8m2NwuGUV3nhXHXEeLygMXoAj</div><small class="exchange-block__address-desc">На этот кошелек будет зачислен платеж 1.6624 LTC</small>
+                    </div>
                   </div>
                   <div class="exchange-block__row exchange-block__footer justify-content-end">
-                    <div class="exchange-block__btn-block"><span class="exchange-block__rate">1 BTC = 332.48 LTC</span>
+                    <div class="exchange-block__btn-block">
                       <button class="btn exchange-block__btn" type="submit">Обменять<img class="icon" src="/images/icons/arrow-right.svg" alt=""></button>
                     </div>
                   </div>

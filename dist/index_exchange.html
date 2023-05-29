@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coinbank</title>
+    <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="/js/config.js"></script>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
     <section class="header-block">
       <div class="container">
         <header>
-          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img class="logo" src="/images/logo.svg" alt="Logo"/></a>
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="#"><img class="logo" src="/images/logo.svg" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <div class="navbar-toggler" id="navbarToggler"><span class="line"></span><span class="line"></span><span class="line"></span></div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="contacts.html">Контакты</a></li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="reviews.html">Отзывы</a></li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="rules.html">Правила</a></li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Отзывы</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Правила</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
               </ul>
             </div>
           </nav>
@@ -36,46 +33,35 @@
             <h2>Торгуйте с легкостью, быстро и безопасно</h2>
             <div class="d-flex justify-content-center w-100">
               <div class="exchange-block">
-                <form class="exchange-block__form" method="GET" action="/exchange.html">
+                <form class="exchange-block__form" action="/index_exchange_">
                   <div class="exchange-block__row">
                     <div class="exchange-block__group">
+                      <div class="exchange-block__label">Вы отдаете</div>
                       <div class="exchange-block__currency">
-                        <div class="custom-dropdown" id="exchangeDropdownFrom" name="currency_from"></div>
+                        <input class="exchange-block__input" type="number" value="0.005">
+                        <div class="d-flex"><img class="exchange-block__currency-symbol" src="images/currencies/btc.svg">
+                          <div class="exchange-block__currency-text">BTC</div>
+                        </div>
                       </div>
-                      <input class="exchange-block__input-number" type="number" value="0.005" name="from">
                     </div>
-                    <button class="exchange-block__swap-btn"><img class="icon" src="images/icons/arrows-icons.svg" alt=""></button>
+                    <div>
+                      <button class="exchange-block__swap-btn"><img class="icon" src="images/icons/arrows-icons.svg" alt=""></button>
+                    </div>
                     <div class="exchange-block__group">
+                      <div class="exchange-block__label">Вы получите</div>
                       <div class="exchange-block__currency">
-                        <div class="custom-dropdown" id="exchangeDropdownTo" name="currency_to"></div>
+                        <input class="exchange-block__input" type="text" value="≈1.6624" readonly>
+                        <div class="d-flex"><img class="exchange-block__currency-symbol" src="images/currencies/ltc.svg">
+                          <div class="exchange-block__currency-text">LTC</div>
+                        </div>
                       </div>
-                      <input class="exchange-block__input-number" type="text" name="to" value="≈1.6624">
                     </div>
                   </div>
-                  <div class="exchange-block__checkbox-group">
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                      </div>
-                      <div class="custom-checkbox__label">Я согласен с правилами обмена</div>
-                    </label>
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                      </div>
-                      <div class="custom-checkbox__label">Я согласен с АМЛ</div>
-                    </label>
-                    <label class="custom-checkbox">
-                      <div>
-                        <input type="checkbox" checked="checked"/><span class="checkmark"></span>
-                      </div>
-                      <div class="custom-checkbox__label">Не запоминать введенные данные</div>
-                    </label>
+                  <div class="exchange-block__row">
+                    <input class="text-input exchange-block__wallet-address" type="text" placeholder="Введите адрес вашего LTC кошелька">
                   </div>
-                  <div class="exchange-block__row exchange-block__footer justify-content-end">
-                    <div class="exchange-block__btn-block"><span class="exchange-block__rate">1 BTC = 332.48 LTC</span>
-                      <button class="btn exchange-block__btn" type="submit">Обменять<img class="icon" src="/images/icons/arrow-right.svg" alt=""></button>
-                    </div>
+                  <div class="exchange-block__row justify-content-end">
+                    <button class="exchange-block__btn" type="submit">Обменять<img class="icon" src="images/icons/arrow-right.svg" alt=""></button>
                   </div>
                 </form>
               </div>
@@ -267,38 +253,6 @@
                     <p class="review-block__txt">Очень доволен работой этого криптообменника! Процесс обмена был очень простым и понятным, а команда поддержки клиентов была на высоте - оперативно и профессионально решили все мои вопросы. Кроме того, я оценил высокую скорость обработки моей транзакции. Буду рекомендовать этот криптообменник своим друзьям и знакомым!</p>
                   </div>
                 </div>
-                <div class="review-block">
-                  <div class="review-block__row">
-                    <div class="review-block__user"><img class="review-block__user-image" src="/images/user_1_img.png"/>
-                      <div class="review-block__user-name"><span>Harris Honko</span>
-                        <div class="review-block__date">14.05.2023</div>
-                      </div>
-                    </div>
-                    <div class="review-block__rating">
-                      <div class="star-rating"><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/not-filled-star.svg" alt=""/><img src="/images/icons/not-filled-star.svg" alt=""/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="review-block__row">
-                    <p class="review-block__txt">Я очень доволен использованием этого криптообменника! Он был быстрым и надежным способом для меня обменять мои криптовалюты. Весь процесс был интуитивно понятным, и я получил свои обменные монеты в течение нескольких минут. Кроме того, обменник обеспечивал высокий уровень безопасности, что для меня является важным фактором при работе с криптовалютой. Я определенно рекомендую этот криптообменник тем, кто ищет удобное и надежное место для обмена криптовалют.</p>
-                  </div>
-                </div>
-                <div class="review-block">
-                  <div class="review-block__row">
-                    <div class="review-block__user"><img class="review-block__user-image" src="/images/user_2_img.png"/>
-                      <div class="review-block__user-name"><span>Keny Sandro</span>
-                        <div class="review-block__date">20.01.2023</div>
-                      </div>
-                    </div>
-                    <div class="review-block__rating">
-                      <div class="star-rating"><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/filled-star.svg" alt=""/><img src="/images/icons/not-filled-star.svg" alt=""/><img src="/images/icons/not-filled-star.svg" alt=""/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="review-block__row">
-                    <p class="review-block__txt">Очень доволен работой этого криптообменника! Процесс обмена был очень простым и понятным, а команда поддержки клиентов была на высоте - оперативно и профессионально решили все мои вопросы. Кроме того, я оценил высокую скорость обработки моей транзакции. Буду рекомендовать этот криптообменник своим друзьям и знакомым!</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -308,12 +262,20 @@
     <div class="container">
       <footer class="footer">
         <div class="row">
-          <div class="col-7 col-lg-6 order-0"><a href="/"><img class="logo" src="/images/logo.svg" alt=""/></a>
+          <div class="col-7 col-lg-6 order-0"><img class="logo" src="/images/logo.svg" alt=""/>
           </div>
-          <div class="col-lg-4 order-2 order-lg-1 mt-4 mt-lg-0"><a class="btn btn-block" href="/contacts.html">Написать нам</a></div>
+          <div class="col-lg-4 order-2 order-lg-1 mt-4 mt-lg-0">
+            <button class="btn btn-block">Написать нам</button>
+          </div>
           <div class="col-5 col-lg-2 order-1 order-lg-2 d-flex align-items-lg-start align-items-center justify-content-end justify-content-lg-around">
-            <div><a class="btn" href="mailto:cryptoinfo@gmail.com"><img class="icon" src="/images/icons/message.svg" alt=""/></a></div>
-            <div><a class="btn ms-4 ms-md-4 ms-lg-2" href="tg://resolve?domain=cryptoSupport"><img class="icon" src="/images/icons/telegram.svg" alt=""/></a></div>
+            <div>
+              <button class="btn"><img class="icon" src="/images/icons/message.svg" alt=""/>
+              </button>
+            </div>
+            <div>
+              <button class="btn ms-4 ms-md-4 ms-lg-2"><img class="icon" src="/images/icons/telegram.svg" alt=""/>
+              </button>
+            </div>
           </div>
         </div>
         <div class="row footer__links">
@@ -321,18 +283,18 @@
             <h6>Общее</h6>
             <ul class="list-unstyled">
               <li><a href="/">Главная</a></li>
-              <li><a href="/reviews.html">Отзывы</a></li>
-              <li><a href="/contacts.html">Контакты</a></li>
-              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/">Отзывы</a></li>
+              <li><a href="/">Контакты</a></li>
+              <li><a href="/">FAQ</a></li>
             </ul>
           </div>
           <div class="col-md-4">
             <h6>Документация</h6>
             <ul class="list-unstyled">
-              <li><a href="/privacy-policy.html">Политика конфиденциальности</a></li>
-              <li><a href="/aml_kyc.html">AML / KYC</a></li>
-              <li><a href="/user-agreement.html">Пользовательское соглашение</a></li>
-              <li><a href="/rules.html">Правила</a></li>
+              <li><a href="/">Политика конфиденциальности</a></li>
+              <li><a href="/">AML / KYC</a></li>
+              <li><a href="/">Пользовательское соглашение</a></li>
+              <li><a href="/">Правила</a></li>
             </ul>
           </div>
           <div class="col-md-2 offset-md-2">
@@ -344,14 +306,6 @@
           </div>
         </div>
       </footer>
-    </div>
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div class="toast text-white align-items-center p-2" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex justify-content-between">
-          <div class="toast-body">Сообщение</div>
-          <button class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

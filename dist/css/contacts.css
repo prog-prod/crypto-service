@@ -1,0 +1,65 @@
+h1.title {
+  margin-bottom: 76px;
+}
+
+.contact-info {
+  padding: 40px 100px;
+}
+.contact-info .icon {
+  width: 30px;
+}
+.contact-info__item {
+  display: flex;
+  margin-bottom: 50px;
+}
+.contact-info__icon {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 15px;
+  gap: 10px;
+  width: 60px;
+  height: 50px;
+  background: rgba(60, 60, 77, 0.08);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.16), -3px -3px 12px rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+.contact-info__txt h6 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FAFAFA;
+  margin-bottom: 6px;
+}
+.contact-info__txt span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FAFAFA;
+}
+.contact-info p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FAFAFA;
+  margin: 40px auto 0;
+}
+
+@media (max-width: 992px) {
+  .contact-info {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 370px) {
+  .contact-info__icon {
+    margin-right: 10px;
+  }
+}
