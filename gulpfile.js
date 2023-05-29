@@ -9,7 +9,7 @@ const pug = require('gulp-pug');
 gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(browserSync.stream());
 });
 
@@ -17,7 +17,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src('src/js/*.js')
         .pipe(babel())
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('docs/js'))
         .pipe(browserSync.stream());
 });
 
@@ -25,20 +25,20 @@ gulp.task('js', function () {
 gulp.task('pug', function () {
     return gulp.src('src/*.pug')
         .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('docs'))
         .pipe(browserSync.stream());
 });
 
-// Task to copy images from src to dist
+// Task to copy images from src to docs
 gulp.task('images', function () {
     return gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('docs/images'));
 });
 
-// Task to copy fonts from src to dist
+// Task to copy fonts from src to docs
 gulp.task('fonts', function () {
     return gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('docs/fonts'));
 });
 
 // Task to reload the page when HTML files change
@@ -51,7 +51,7 @@ gulp.task('html', function (done) {
 gulp.task('watch', function () {
     browserSync.init({
         server: {
-            baseDir: './dist'
+            baseDir: './docs'
         }
     });
 
